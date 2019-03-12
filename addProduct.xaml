@@ -39,7 +39,7 @@
         <TextBox Name="image" Grid.Column="1" Grid.Row="5" Margin="2" TextAlignment="Center"/>
         <Label Grid.Column="0" Grid.Row="6" Margin="2" FontWeight="Bold" Height="50">Catégorie</Label>
         <ComboBox x:Name="categorie_choice" Grid.Column="1" Grid.Row="6" DisplayMemberPath="categorie1" SelectedValuePath="id" Background="#FF2A41D3" Height="25" Margin="0,3" HorizontalContentAlignment="Center" />
-        <!--<TextBox Name="categorie" Grid.Column="1" Grid.Row="5" Margin="2" TextAlignment="Center"/>-->
-        <Button Grid.Row="6" Content="Ajouter" Margin="0,55,4,-32" Click="AddCar" Grid.Column="1"/>
+        <Button Grid.Row="6" Content="Ajouter" Margin="60,45,24,-22" Click="AddCar" Grid.ColumnSpan="2"/>
+        <Button Grid.Row="6" Content="Retour Liste" Margin="60,77,24,-54" Click="Return" Grid.ColumnSpan="2"/>
     </Grid>
 </Page>

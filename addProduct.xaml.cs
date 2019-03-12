@@ -46,11 +46,17 @@ namespace Gestion
         //
         db.produit.Add(new_car);
         db.SaveChanges();
+        //
+        MessageBox.Show("Le produit a bien été ajouté");
+        //
         }
         private void Combo(object sender, RoutedEventArgs e)
         {
         categorie_choice.ItemsSource = db.categorie.ToList();
         }
-
+        private void Return(object sender, RoutedEventArgs e)
+        {
+        this.NavigationService.Navigate(new System.Uri("stockManagment.xaml", UriKind.RelativeOrAbsolute));
+        }
     }
 }

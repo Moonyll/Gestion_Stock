@@ -25,6 +25,7 @@ namespace Gestion
     {
         private Stock db = new Stock();
         produit car;
+        
         int idtodel;
         public stockManagment()
         {
@@ -40,6 +41,7 @@ namespace Gestion
             if (stock_product.SelectedItem == null) return;
             
             car = stock_product.SelectedItem as produit;
+           
 
             idtodel = car.id; // Si on veut supprimer ce produit
 
@@ -48,7 +50,7 @@ namespace Gestion
             description.Text = car.reference;
             prix.Text = car.prix.ToString();
             quantite.Text = car.quantite.ToString();
-            categorie.Text = car.categorie.ToString();
+            categorie.Text = car.categorie.categorie1;
             //
         }
         private void UpCar(object sender, RoutedEventArgs e)
