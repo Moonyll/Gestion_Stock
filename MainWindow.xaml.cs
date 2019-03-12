@@ -40,5 +40,9 @@ namespace Gestion
         {
             Main.Content = new Accueil();
         }
+        private void AddP(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new addProduct();
+        }
     }
 }

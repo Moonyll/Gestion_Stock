@@ -1,0 +1,45 @@
+﻿<Page x:Class="Gestion.addProduct"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Gestion"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="addProduct" Loaded="Combo">
+
+    <!--Formulaire de mis à jour-->
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="273" Width="225" Margin="10" Background="#FF00AEFF">
+        <!--Définition des colonnes-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <!--Définition des lignes-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="0" Grid.Row="0" Margin="2" FontWeight="Bold">Nom</Label>
+        <TextBox Name="nom" Grid.Column="1" Grid.Row="0" Margin="2" TextAlignment="Center"/>
+        <Label Grid.Column="0" Grid.Row="1" Margin="2" FontWeight="Bold">Référence</Label>
+        <TextBox Name="reference" Grid.Column="1" Grid.Row="1" Margin="2" TextAlignment="Center"/>
+        <Label Grid.Column="0" Grid.Row="2" Margin="2" FontWeight="Bold">Description</Label>
+        <TextBox  Name="description" Grid.Column="1" Grid.Row="2" Margin="2" TextAlignment="Center"/>
+        <Label Grid.Column="0" Grid.Row="3" Margin="2" FontWeight="Bold">Prix</Label>
+        <TextBox Name="prix" Grid.Column="1" Grid.Row="3" Margin="2" TextAlignment="Center"/>
+        <Label Grid.Column="0" Grid.Row="4" Margin="2" FontWeight="Bold">Quantité</Label>
+        <TextBox Name="quantite" Grid.Column="1" Grid.Row="4" Margin="2" TextAlignment="Center"/>
+        <Label Grid.Column="0" Grid.Row="5" Margin="2" FontWeight="Bold">Image</Label>
+        <TextBox Name="image" Grid.Column="1" Grid.Row="5" Margin="2" TextAlignment="Center"/>
+        <Label Grid.Column="0" Grid.Row="6" Margin="2" FontWeight="Bold" Height="50">Catégorie</Label>
+        <ComboBox x:Name="categorie_choice" Grid.Column="1" Grid.Row="6" DisplayMemberPath="categorie1" SelectedValuePath="id" Background="#FF2A41D3" Height="25" Margin="0,3" HorizontalContentAlignment="Center" />
+        <!--<TextBox Name="categorie" Grid.Column="1" Grid.Row="5" Margin="2" TextAlignment="Center"/>-->
+        <Button Grid.Row="6" Content="Ajouter" Margin="0,55,4,-32" Click="AddCar" Grid.Column="1"/>
+    </Grid>
+</Page>

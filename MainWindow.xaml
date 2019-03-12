@@ -18,6 +18,7 @@
                 </MenuItem>
                 <!--Menu Gestion Catalogue-->
                 <MenuItem Header="_Gestion Du Stock" Background="#FF33B99B" FontWeight="Bold" Foreground="White">
+                    <MenuItem Header="_Ajouter Un Produit" Click="AddP" Background="#FF5CD1B6"/>
                     <MenuItem Header="_Liste Des Produits" Click="Managment" Background="#FF5CD1B6"/>
                     <MenuItem Header="_Retour Accueil" Click="Home" Background="#FF5F81BB"/>
                     <MenuItem Header="_Exit" Click="Exit" Background="#FF0B4235" />

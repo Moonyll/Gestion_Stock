@@ -19,7 +19,7 @@
                 <DataGridTextColumn Header="Prix" Binding="{Binding prix}"/>
                 <DataGridTextColumn Header="Quantité" Binding="{Binding quantite}"/>
                 <DataGridTextColumn Header="Image" Binding="{Binding image}"/>
-                <DataGridTextColumn Header="Categorie" Binding="{Binding categorie.categorie}"/>
+                <DataGridTextColumn Header="Categorie" Binding="{Binding categorie.categorie1}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

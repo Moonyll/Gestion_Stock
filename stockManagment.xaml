@@ -21,7 +21,7 @@
                 <DataGridTextColumn Header="Prix" Binding="{Binding prix}"/>
                 <DataGridTextColumn Header="Quantité" Binding="{Binding quantite}"/>
                 <DataGridTextColumn Header="Image" Binding="{Binding image}"/>
-                <DataGridTextColumn Header="Categorie" Binding="{Binding categorie.categorie}"/>
+                <DataGridTextColumn Header="Categorie" Binding="{Binding categorie.categorie1}"/>
             </DataGrid.Columns>
         </DataGrid>
         </Grid>
@@ -44,7 +44,6 @@
             </Grid.RowDefinitions>
             <Label Grid.Column="0" Grid.Row="0" Margin="2" FontWeight="Bold">Nom</Label>
             <TextBox Name="nom" Grid.Column="1" Grid.Row="0" Margin="2" TextAlignment="Center"/>
-            <!--<TextBox Name="TextBox_LastName" Grid.Column="1" Grid.Row="0" Margin="2" TextAlignment="Center" Text="{Binding ElementName=listing, Path=SelectedItem.LastName,Mode=TwoWay}"/>-->
             <Label Grid.Column="0" Grid.Row="1" Margin="2" FontWeight="Bold">Référence</Label>
             <TextBox Name="reference" Grid.Column="1" Grid.Row="1" Margin="2" TextAlignment="Center"/>
             <Label Grid.Column="0" Grid.Row="2" Margin="2" FontWeight="Bold">Description</Label>

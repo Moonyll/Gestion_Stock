@@ -25,3 +25,5 @@ C:\Users\Dell\Documents\Exos\Gestion\Gestion\Gestion\obj\Debug\stockManagment.g.
 C:\Users\Dell\Documents\Exos\Gestion\Gestion\Gestion\obj\Debug\stockManagment.baml
 C:\Users\Dell\Documents\Exos\Gestion\Gestion\Gestion\obj\Debug\Accueil.g.cs
 C:\Users\Dell\Documents\Exos\Gestion\Gestion\Gestion\obj\Debug\Accueil.baml
+C:\Users\Dell\Documents\Exos\Gestion\Gestion\Gestion\obj\Debug\addProduct.g.cs
+C:\Users\Dell\Documents\Exos\Gestion\Gestion\Gestion\obj\Debug\addProduct.baml
