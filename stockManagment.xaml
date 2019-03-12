@@ -6,12 +6,21 @@
       xmlns:local="clr-namespace:Gestion"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="stockManagment">
-
-    <Grid>
-        <Grid>
-            <TextBox>Gestion du Stock</TextBox>
-        </Grid>
-
+      Title="stockManagment" Loaded="Stock_List">
+    <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Height="273" Width="auto" Background="Blue">
+        <Grid.InputBindings>
+            <!--<MouseBinding Gesture="LeftDoubleClick" Command="{Binding Details}" />-->
+        </Grid.InputBindings>
+        <DataGrid AutoGenerateColumns="False" x:Name="stock_product" Foreground="#FF1138BB">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nom" Binding="{Binding nom}" />
+                <DataGridTextColumn Header="Référence" Binding="{Binding reference}"/>
+                <DataGridTextColumn Header="Descritpion" Binding="{Binding description}"/>
+                <DataGridTextColumn Header="Prix" Binding="{Binding prix}"/>
+                <DataGridTextColumn Header="Quantité" Binding="{Binding quantite}"/>
+                <DataGridTextColumn Header="Image" Binding="{Binding image}"/>
+                <DataGridTextColumn Header="Categorie" Binding="{Binding categorie.categorie}"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>

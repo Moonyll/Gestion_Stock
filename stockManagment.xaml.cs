@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.Entity;
+using System.Data.Entity.Validation;
+using System.Text.RegularExpressions;
 
 namespace Gestion
 {
@@ -20,9 +23,15 @@ namespace Gestion
     /// </summary>
     public partial class stockManagment : Page
     {
+        private Stock db = new Stock();
         public stockManagment()
         {
-            InitializeComponent();
+        InitializeComponent();
+        }
+        private void Stock_List(object sender, RoutedEventArgs e)
+        {
+        var listing = db.produit.Include(s => s.categorie);
+        stock_product.ItemsSource = listing.ToList();
         }
     }
 }
