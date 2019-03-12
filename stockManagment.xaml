@@ -7,11 +7,13 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="stockManagment" Loaded="Stock_List">
-    <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Height="273" Width="auto" Background="Blue">
-        <Grid.InputBindings>
-            <!--<MouseBinding Gesture="LeftDoubleClick" Command="{Binding Details}" />-->
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="10" >
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Height="273" Width="auto" Background="Blue">
+         <Grid.InputBindings>
+         <MouseBinding Gesture="LeftDoubleClick" Command="{Binding Car_Details}" />
         </Grid.InputBindings>
-        <DataGrid AutoGenerateColumns="False" x:Name="stock_product" Foreground="#FF1138BB">
+         <!--Grille du Stock-->
+            <DataGrid AutoGenerateColumns="False" x:Name="stock_product" MouseDoubleClick="Car_Details" Foreground="#FF1138BB">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nom" Binding="{Binding nom}" />
                 <DataGridTextColumn Header="Référence" Binding="{Binding reference}"/>
@@ -22,5 +24,40 @@
                 <DataGridTextColumn Header="Categorie" Binding="{Binding categorie.categorie}"/>
             </DataGrid.Columns>
         </DataGrid>
-    </Grid>
+        </Grid>
+        <!--Formulaire de mis à jour-->
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="273" Width="225" Margin="10" Background="#FF00AEFF">
+            <!--Définition des colonnes-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            <!--Définition des lignes-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Column="0" Grid.Row="0" Margin="2" FontWeight="Bold">Nom</Label>
+            <TextBox Name="nom" Grid.Column="1" Grid.Row="0" Margin="2" TextAlignment="Center"/>
+            <!--<TextBox Name="TextBox_LastName" Grid.Column="1" Grid.Row="0" Margin="2" TextAlignment="Center" Text="{Binding ElementName=listing, Path=SelectedItem.LastName,Mode=TwoWay}"/>-->
+            <Label Grid.Column="0" Grid.Row="1" Margin="2" FontWeight="Bold">Référence</Label>
+            <TextBox Name="reference" Grid.Column="1" Grid.Row="1" Margin="2" TextAlignment="Center"/>
+            <Label Grid.Column="0" Grid.Row="2" Margin="2" FontWeight="Bold">Description</Label>
+            <TextBox  Name="description" Grid.Column="1" Grid.Row="2" Margin="2" TextAlignment="Center"/>
+            <Label Grid.Column="0" Grid.Row="3" Margin="2" FontWeight="Bold">Prix</Label>
+            <TextBox Name="prix" Grid.Column="1" Grid.Row="3" Margin="2" TextAlignment="Center"/>
+            <Label Grid.Column="0" Grid.Row="4" Margin="2" FontWeight="Bold">Quantité</Label>
+            <TextBox Name="quantite" Grid.Column="1" Grid.Row="4" Margin="2" TextAlignment="Center"/>
+            <Label Grid.Column="0" Grid.Row="5" Margin="2" FontWeight="Bold" Height="50">Catégorie</Label>
+            <TextBox Name="categorie" Grid.Column="1" Grid.Row="5" Margin="2" TextAlignment="Center"/>
+            <Button Grid.Column="0" Grid.Row="6" Content="Supprimer" Margin="7" Click="DelCar"/>
+            <Button Grid.Column="1" Grid.Row="6" Content="Modifier" Margin="7" Click="UpCar"/>
+        </Grid>
+        <!--Fin du formulaire de mise à jour-->
+      </StackPanel>
 </Page>

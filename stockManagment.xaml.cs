@@ -24,14 +24,60 @@ namespace Gestion
     public partial class stockManagment : Page
     {
         private Stock db = new Stock();
+        produit car;
+        int idtodel;
         public stockManagment()
         {
-        InitializeComponent();
+            InitializeComponent();
         }
         private void Stock_List(object sender, RoutedEventArgs e)
         {
-        var listing = db.produit.Include(s => s.categorie);
-        stock_product.ItemsSource = listing.ToList();
+            var listing = db.produit.Include(s => s.categorie);
+            stock_product.ItemsSource = listing.ToList();
+        }
+        private void Car_Details(object sender, MouseButtonEventArgs e)
+        {
+            if (stock_product.SelectedItem == null) return;
+            
+            car = stock_product.SelectedItem as produit;
+
+            idtodel = car.id; // Si on veut supprimer ce produit
+
+            nom.Text = car.nom;
+            reference.Text = car.reference;
+            description.Text = car.reference;
+            prix.Text = car.prix.ToString();
+            quantite.Text = car.quantite.ToString();
+            categorie.Text = car.categorie.ToString();
+            //
+        }
+        private void UpCar(object sender, RoutedEventArgs e)
+        {
+
+            car.nom = nom.Text;
+            car.reference=reference.Text;
+            car.description= description.Text;
+            car.prix = Convert.ToInt32(prix.Text);
+            car.quantite = Convert.ToInt32(quantite.Text);
+            //categorie.categorie = categorie.Text;
+            //
+            db.Entry(car).State = EntityState.Modified;
+            db.SaveChanges();
+            //
+            MessageBox.Show("Le produit a bien été mis à jour");
+            //
+            stock_product.Items.Refresh();
+        }
+        private void DelCar(object sender, RoutedEventArgs e)
+        {
+            produit car = db.produit.Find(idtodel);
+            db.produit.Remove(car);
+            db.SaveChanges();
+            //
+            MessageBox.Show("Le produit a bien été supprimé");
+            // Updating List
+            stock_product.ItemsSource = null;
+            stock_product.ItemsSource = db.produit.ToList();  //
         }
     }
 }
