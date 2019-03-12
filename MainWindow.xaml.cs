@@ -24,5 +24,21 @@ namespace Gestion
         {
             InitializeComponent();
         }
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+        }
+        private void Catalog(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new catalogList();
+        }
+        private void Managment(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new stockManagment();
+        }
+        private void Home(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new Accueil();
+        }
     }
 }

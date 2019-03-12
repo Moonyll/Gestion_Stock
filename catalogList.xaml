@@ -1,0 +1,35 @@
+﻿<Page x:Class="Gestion.catalogList"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Gestion"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="catalogList" Loaded="Catalog_List">
+
+    <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Height="273" Width="auto" Background="Blue">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="317*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.InputBindings>
+            <!--<MouseBinding Gesture="LeftDoubleClick" Command="{Binding Details}" />-->
+        </Grid.InputBindings>
+        <!--<DataGrid Name="listing"/>-->
+        <DataGrid AutoGenerateColumns="False" x:Name="listing_product" Foreground="#FF1138BB">
+            <DataGrid.Columns>
+               
+                <DataGridTextColumn Header="Nom" Binding="{Binding nom}" />
+                <DataGridTextColumn Header="Référence" Binding="{Binding reference}"/>
+                <DataGridTextColumn Header="Descritpion" Binding="{Binding description}"/>
+                <DataGridTextColumn Header="Prix" Binding="{Binding prix}"/>
+                <DataGridTextColumn Header="Quantité" Binding="{Binding quantite}"/>
+                <DataGridTextColumn Header="Image" Binding="{Binding image}"/>
+                <DataGridTextColumn Header="Categorie" Binding="{Binding categorie.categorie}"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Page>

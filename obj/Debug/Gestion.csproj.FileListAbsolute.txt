@@ -19,3 +19,9 @@ C:\Users\Dell\Documents\Exos\Gestion\Gestion\Gestion\bin\Debug\EntityFramework.x
 C:\Users\Dell\Documents\Exos\Gestion\Gestion\Gestion\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Dell\Documents\Exos\Gestion\Gestion\Gestion\bin\Debug\fr\EntityFramework.resources.dll
 C:\Users\Dell\Documents\Exos\Gestion\Gestion\Gestion\obj\Debug\Gestion.csproj.CopyComplete
+C:\Users\Dell\Documents\Exos\Gestion\Gestion\Gestion\obj\Debug\catalogList.g.cs
+C:\Users\Dell\Documents\Exos\Gestion\Gestion\Gestion\obj\Debug\catalogList.baml
+C:\Users\Dell\Documents\Exos\Gestion\Gestion\Gestion\obj\Debug\stockManagment.g.cs
+C:\Users\Dell\Documents\Exos\Gestion\Gestion\Gestion\obj\Debug\stockManagment.baml
+C:\Users\Dell\Documents\Exos\Gestion\Gestion\Gestion\obj\Debug\Accueil.g.cs
+C:\Users\Dell\Documents\Exos\Gestion\Gestion\Gestion\obj\Debug\Accueil.baml
