@@ -6,12 +6,12 @@
       xmlns:local="clr-namespace:Gestion"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="catalogList" Loaded="Catalog_List">
-    <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Height="273" Width="auto" Background="Blue">
+      Title="catalogList" Loaded="Catalog_List" Background="#FF1167AE">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="273" Width="auto" Background="#FF1167AE">
         <Grid.InputBindings>
             <!--<MouseBinding Gesture="LeftDoubleClick" Command="{Binding Details}" />-->
         </Grid.InputBindings>
-        <DataGrid AutoGenerateColumns="False" x:Name="listing_product" Foreground="#FF1138BB">
+        <DataGrid AutoGenerateColumns="False" x:Name="listing_product" Foreground="#FF1138BB" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nom" Binding="{Binding nom}" />
                 <DataGridTextColumn Header="Référence" Binding="{Binding reference}"/>

@@ -9,7 +9,7 @@
       Title="addProduct" Loaded="Combo">
 
     <!--Formulaire de mis à jour-->
-    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="273" Width="225" Margin="10" Background="#FF00AEFF">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="320" Width="228" Margin="280,10,280,45" Background="#FF283751">
         <!--Définition des colonnes-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
@@ -25,21 +25,21 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <Label Grid.Column="0" Grid.Row="0" Margin="2" FontWeight="Bold">Nom</Label>
-        <TextBox Name="nom" Grid.Column="1" Grid.Row="0" Margin="2" TextAlignment="Center"/>
-        <Label Grid.Column="0" Grid.Row="1" Margin="2" FontWeight="Bold">Référence</Label>
-        <TextBox Name="reference" Grid.Column="1" Grid.Row="1" Margin="2" TextAlignment="Center"/>
-        <Label Grid.Column="0" Grid.Row="2" Margin="2" FontWeight="Bold">Description</Label>
-        <TextBox  Name="description" Grid.Column="1" Grid.Row="2" Margin="2" TextAlignment="Center"/>
-        <Label Grid.Column="0" Grid.Row="3" Margin="2" FontWeight="Bold">Prix</Label>
-        <TextBox Name="prix" Grid.Column="1" Grid.Row="3" Margin="2" TextAlignment="Center"/>
-        <Label Grid.Column="0" Grid.Row="4" Margin="2" FontWeight="Bold">Quantité</Label>
-        <TextBox Name="quantite" Grid.Column="1" Grid.Row="4" Margin="2" TextAlignment="Center"/>
-        <Label Grid.Column="0" Grid.Row="5" Margin="2" FontWeight="Bold">Image</Label>
-        <TextBox Name="image" Grid.Column="1" Grid.Row="5" Margin="2" TextAlignment="Center"/>
-        <Label Grid.Column="0" Grid.Row="6" Margin="2" FontWeight="Bold" Height="50">Catégorie</Label>
-        <ComboBox x:Name="categorie_choice" Grid.Column="1" Grid.Row="6" DisplayMemberPath="categorie1" SelectedValuePath="id" Background="#FF2A41D3" Height="25" Margin="0,3" HorizontalContentAlignment="Center" />
-        <Button Grid.Row="6" Content="Ajouter" Margin="60,45,24,-22" Click="AddCar" Grid.ColumnSpan="2"/>
-        <Button Grid.Row="6" Content="Retour Liste" Margin="60,77,24,-54" Click="Return" Grid.ColumnSpan="2"/>
+        <Label Grid.Column="0" Grid.Row="0" Margin="2,25,2,2" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center">Nom</Label>
+        <TextBox Name="nom" Grid.Column="1" Grid.Row="0" Margin="2,25,2,2" TextAlignment="Center" Background="#FF73BECF"/>
+        <Label Grid.Column="0" Grid.Row="1" Margin="2" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White">Référence</Label>
+        <TextBox Name="reference" Grid.Column="1" Grid.Row="1" Margin="2" TextAlignment="Center" Background="#FF73BECF"/>
+        <Label Grid.Column="0" Grid.Row="2" Margin="2" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White">Description</Label>
+        <TextBox  Name="description" Grid.Column="1" Grid.Row="2" Margin="2" TextAlignment="Center" Background="#FF73BECF"/>
+        <Label Grid.Column="0" Grid.Row="3" Margin="2" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White">Prix</Label>
+        <TextBox Name="prix" Grid.Column="1" Grid.Row="3" Margin="2" TextAlignment="Center" Background="#FF73BECF"/>
+        <Label Grid.Column="0" Grid.Row="4" Margin="2" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White">Quantité</Label>
+        <TextBox Name="quantite" Grid.Column="1" Grid.Row="4" Margin="2" TextAlignment="Center" Background="#FF73BECF"/>
+        <Label Grid.Column="0" Grid.Row="5" Margin="2" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White">Image</Label>
+        <TextBox Name="image" Grid.Column="1" Grid.Row="5" Margin="2" TextAlignment="Center" Background="#FF73BECF"/>
+        <Label Grid.Column="0" Grid.Row="6" Margin="2" FontWeight="Bold" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White">Catégorie</Label>
+        <ComboBox x:Name="categorie_choice" Grid.Column="1" Grid.Row="6" DisplayMemberPath="categorie1" SelectedValuePath="id" Background="#FF73BECF" Height="25" Margin="0,3,2,28" HorizontalContentAlignment="Center" FontWeight="Bold" />
+        <Button Grid.Row="6" Content="Ajouter" Margin="10,36,10,-13" Click="AddCar" Grid.Column="1" Background="#FF8BE669" Foreground="White" FontWeight="Bold" FontSize="10"/>
+        <Button Grid.Row="6" Content="Retour Liste" Margin="10,75,10,-52" Click="Return" Grid.Column="1" Background="#FF257EC9" FontWeight="Bold" Foreground="White" FontSize="10"/>
     </Grid>
 </Page>

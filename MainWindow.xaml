@@ -5,23 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Gestion"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Background="White" Loaded="Window_Start">
     <StackPanel>
         <!--Menu-->
         <DockPanel>
             <Menu DockPanel.Dock="Top" FontSize="16">
                 <!--Menu Clients-->
-                <MenuItem Header="_Catalogue Produit" Background="#FF1387E8" FontWeight="Bold" Foreground="White">
-                    <MenuItem Header="_Consulter Catalogue" Click="Catalog" Background="#FF90B8D8"/>
+                <MenuItem Header="_Catalogue Des Produits" Background="#FF1387E8" FontWeight="Bold" Foreground="White">
+                    <MenuItem Header="_Consulter Le Catalogue" Click="Catalog" Background="#FF90B8D8"/>
                     <MenuItem Header="_Retour Accueil" Click="Home" Background="#FF5F81BB"/>
                     <MenuItem Header="_Exit" Click="Exit" Background="#FF1A344D" />
                 </MenuItem>
                 <!--Menu Gestion Catalogue-->
-                <MenuItem Header="_Gestion Du Stock" Background="#FF33B99B" FontWeight="Bold" Foreground="White">
-                    <MenuItem Header="_Ajouter Un Produit" Click="AddP" Background="#FF5CD1B6"/>
-                    <MenuItem Header="_Liste Des Produits" Click="Managment" Background="#FF5CD1B6"/>
-                    <MenuItem Header="_Retour Accueil" Click="Home" Background="#FF5F81BB"/>
-                    <MenuItem Header="_Exit" Click="Exit" Background="#FF0B4235" />
+                <MenuItem Header="_Gestion Du Stock" Background="#FF283751" FontWeight="Bold" Foreground="White">
+                    <MenuItem Header="_Ajouter Un Produit" Click="AddP" Background="#FF5F75C1"/>
+                    <MenuItem Header="_Liste Des Produits" Click="Managment" Background="#FF435DB6"/>
+                    <MenuItem Header="_Retour Accueil" Click="Home" Background="#FF1F4E9C"/>
+                    <MenuItem Header="_Exit" Click="Exit" Background="#FF2F4263" />
                 </MenuItem>
               </Menu>
         </DockPanel>

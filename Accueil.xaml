@@ -7,8 +7,17 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Accueil">
+    <Page.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black" Offset="0.987"/>
+            <GradientStop Color="#FF1E6EB2" Offset="0.183"/>
+            <GradientStop Color="#FF000305" Offset="0.57"/>
+        </LinearGradientBrush>
+    </Page.Background>
 
-    <Grid>
-    <TextBox>Accueil Voiture 76 !!!!!!!!!!!</TextBox>
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Margin="2" Panel.ZIndex="1" FontSize="18" FontWeight="Bold" Foreground="White">~ Bienvenue sur LH Automobile 76 ~</TextBlock>
+        <Image Source="img\corvette.jpg" Panel.ZIndex="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="50,29,35,50" Width="712"/>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="2,2,2,10" Panel.ZIndex="1" FontSize="18" FontWeight="Bold" Foreground="White">La Manu 2019</TextBlock>
     </Grid>
 </Page>

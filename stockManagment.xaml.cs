@@ -35,6 +35,14 @@ namespace Gestion
         {
             var listing = db.produit.Include(s => s.categorie);
             stock_product.ItemsSource = listing.ToList();
+            //
+            //List<produit> produits = db.produit.ToList();
+            //foreach (produit product in produits)
+            //{
+            //stock_product.Items.Add(product);
+
+            //product.image = $"img/{product.image}.jpg";
+            //}
         }
         private void Car_Details(object sender, MouseButtonEventArgs e)
         {
@@ -47,7 +55,7 @@ namespace Gestion
 
             nom.Text = car.nom;
             reference.Text = car.reference;
-            description.Text = car.reference;
+            description.Text = car.description;
             prix.Text = car.prix.ToString();
             quantite.Text = car.quantite.ToString();
             categorie.Text = car.categorie.categorie1;

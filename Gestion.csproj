@@ -135,29 +135,31 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Resource Include="img\206+-blanche.jpg" />
-    <Resource Include="img\alfa-romeo-mito-rouge.jpg" />
-    <Resource Include="img\amg-gt-jaune.jpg" />
-    <Resource Include="img\Aston-Martin-db9-bordeaux.png" />
-    <Resource Include="img\audi-a1-grise.jpg" />
-    <Resource Include="img\bmw I8.jpg" />
-    <Resource Include="img\bmw-i3-bleu.jpg" />
-    <Resource Include="img\Bmw_Serie_5_grise.jpg" />
-    <Resource Include="img\Camaro-SS-Noir.jpg" />
-    <Resource Include="img\classe-a-grise.jpg" />
-    <Resource Include="img\Dodge-Charger-Noir.png" />
-    <Resource Include="img\Fiat-500-noir.jpg" />
-    <Resource Include="img\Ford-Mustang Rouge.jpg" />
-    <Resource Include="img\Mondeo bleu.jpg" />
-    <Resource Include="img\mx-5_rouge.jpg" />
-    <Resource Include="img\peugeot_508_rouge.jpg" />
-    <Resource Include="img\renault-talisman-grise.jpg" />
-    <Resource Include="img\renault-talisman-noir.jpg" />
-    <Resource Include="img\Smart-rouge.jpg" />
-    <Resource Include="img\Twingo-bleu.jpg" />
-    <Resource Include="img\Volvo_S60_grise.jpg" />
+    <Resource Include="img\corvette.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\image_206_blanche.jpg" />
+    <Resource Include="img\image_508_rouge.jpg" />
+    <Resource Include="img\image_AMGGT_jaune.jpg" />
+    <Resource Include="img\image_audia1q_grise.jpg" />
+    <Resource Include="img\image_bmwi3_noire_bleue.jpg" />
+    <Resource Include="img\image_camaro_noire.jpg" />
+    <Resource Include="img\image_charger_noire.jpg" />
+    <Resource Include="img\image_classea_grise.jpg" />
+    <Resource Include="img\image_DB9_bordeaux.jpg" />
+    <Resource Include="img\image_fiat500_noire.jpg" />
+    <Resource Include="img\image_fortwo_rouge.jpg" />
+    <Resource Include="img\image_i8_noire_blanche.jpg" />
+    <Resource Include="img\image_mito_rouge.jpg" />
+    <Resource Include="img\image_mondéo_bleue.jpg" />
+    <Resource Include="img\image_mustang_rouge.jpg" />
+    <Resource Include="img\image_mx5_rouge.jpg" />
+    <Resource Include="img\image_s60_grise.jpg" />
+    <Resource Include="img\image_serie5_grise.jpg" />
+    <Resource Include="img\image_talisman_Grise.jpg" />
+    <Resource Include="img\image_talisman_noire.jpg" />
+    <Resource Include="img\image_twingo_bleue.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

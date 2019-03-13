@@ -44,5 +44,9 @@ namespace Gestion
         {
             Main.Content = new addProduct();
         }
+        private void Window_Start(object sender, RoutedEventArgs e)
+        {
+            Main.Navigate(new System.Uri("Accueil.xaml", UriKind.RelativeOrAbsolute));
+        }
     }
 }
