@@ -11,14 +11,24 @@
         <Grid.InputBindings>
             <!--<MouseBinding Gesture="LeftDoubleClick" Command="{Binding Details}" />-->
         </Grid.InputBindings>
-        <DataGrid AutoGenerateColumns="False" x:Name="listing_product" Foreground="#FF1138BB" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+        <DataGrid AutoGenerateColumns="False" x:Name="listing_product" Foreground="#FF1138BB" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nom" Binding="{Binding nom}" />
                 <DataGridTextColumn Header="Référence" Binding="{Binding reference}"/>
                 <DataGridTextColumn Header="Descritpion" Binding="{Binding description}"/>
                 <DataGridTextColumn Header="Prix" Binding="{Binding prix}"/>
                 <DataGridTextColumn Header="Quantité" Binding="{Binding quantite}"/>
-                <DataGridTextColumn Header="Image" Binding="{Binding image}"/>
+                <!--<DataGridTextColumn Header="Image" Binding="{Binding image}"/>-->
+                <DataGridTextColumn Header="Image" Binding="{Binding image}" FontSize="10" Visibility="Hidden"/>
+                <!--image-->
+                <DataGridTemplateColumn Header="Image" Width="SizeToCells" IsReadOnly="True">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding image}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <!--image-->
                 <DataGridTextColumn Header="Categorie" Binding="{Binding categorie.categorie1}"/>
             </DataGrid.Columns>
         </DataGrid>

@@ -14,22 +14,23 @@
             </Grid.InputBindings>
             <!--Définition des colonnes-->
             <!--Grille du Stock-->
-            <DataGrid AutoGenerateColumns="False" x:Name="stock_product" MouseDoubleClick="Car_Details" Margin="10" Foreground="#FF1138BB" HorizontalAlignment="Center" VerticalAlignment="Center" Width="auto">
+            <DataGrid AutoGenerateColumns="False" x:Name="stock_product" MouseDoubleClick="Car_Details" Margin="10" Foreground="#FF1138BB" HorizontalAlignment="Center" VerticalAlignment="Center" Width="auto" IsReadOnly="True">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Nom" Binding="{Binding nom}" FontSize="10" />
                     <DataGridTextColumn Header="Référence" Binding="{Binding reference}" FontSize="10"/>
                     <DataGridTextColumn Header="Descritpion" Binding="{Binding description}" FontSize="10"/>
                     <DataGridTextColumn Header="Prix" Binding="{Binding prix}" Width="30" FontSize="10"/>
                     <DataGridTextColumn Header="Quantité" Binding="{Binding quantite}" Width="45" FontSize="10"/>
+                    <DataGridTextColumn Header="Image" Binding="{Binding image}" FontSize="10" Visibility="Hidden"/>
                     <!--image-->
-                    <DataGridTextColumn Header="Image" Binding="{Binding image}" FontSize="10"/>
-                    <!--<DataGridTemplateColumn Header="Image" Width="SizeToCells" IsReadOnly="True">
+                    <DataGridTemplateColumn Header="Image" Width="SizeToCells" IsReadOnly="True">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <Image Source="{Binding image}"/>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>-->
+                    </DataGridTemplateColumn>
+                    <!--image-->
                     <DataGridTextColumn Header="Categorie" Binding="{Binding categorie.categorie1}" FontSize="10"/>
                 </DataGrid.Columns>
             </DataGrid>

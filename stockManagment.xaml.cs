@@ -43,14 +43,6 @@ namespace Gestion
         {
             var listing = db.produit.Include(s => s.categorie);
             stock_product.ItemsSource = listing.ToList();
-            //
-            //List<produit> produits = db.produit.ToList();
-            //foreach (produit product in produits)
-            //{
-            //stock_product.Items.Add(product);
-
-            //product.image = $"img/{product.image}.jpg";
-            //}
         }
         private void Car_Details(object sender, MouseButtonEventArgs e)
         {

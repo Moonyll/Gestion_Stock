@@ -176,5 +176,44 @@ namespace Gestion
         {
         this.NavigationService.Navigate(new System.Uri("stockManagment.xaml", UriKind.RelativeOrAbsolute));
         }
+
+        private void BrowseButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Créer OpenFileDialog
+            Microsoft.Win32.OpenFileDialog openFileDlg = new Microsoft.Win32.OpenFileDialog();
+
+            // Filtrer les extensions 
+            openFileDlg.DefaultExt = ".jpg";
+            openFileDlg.Filter = "JPEG  (.jpg)|*.jpg";
+
+            // Lancer OpenFileDialog en appelant la méthode ShowDialog
+            Nullable<bool> result = openFileDlg.ShowDialog();
+            // Get the selected file name and display in a TextBox.
+            // Load content of file in a TextBlock
+            if (result == true)
+            {
+                image.Text = openFileDlg.FileName;
+                //TextBlock1.Text = System.IO.File.ReadAllText(openFileDlg.FileName);
+            }
+
+
+
+            ////// Créer OpenFileDialog
+            ////Microsoft.Win32.OpenFileDialog openFileDlg = new Microsoft.Win32.OpenFileDialog();
+
+            ////// Filtrer les extensions 
+            ////openFileDlg.DefaultExt = ".jpg";
+            ////openFileDlg.Filter = "JPG Files (.jpg)|.jpg";
+
+            ////// Lancer OpenFileDialog en appelant la méthode ShowDialog
+            ////Nullable<bool> result = openFileDlg.ShowDialog();
+            ////// Récupere le chemin du fichier et l'affiche dans la textbox
+            ////// Si un fichier a été sélectionné
+            ////if (result == true)
+            ////{
+            ////    image.Text = openFileDlg.FileName;
+            ////    //TextBlock1.Text = System.IO.File.ReadAllText(openFileDlg.FileName);
+            ////}
+        }
     }
 }
