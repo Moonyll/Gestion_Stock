@@ -23,15 +23,15 @@ namespace Gestion
     /// </summary>
     public partial class catalogList : Page
     {
-        private Stock db = new Stock();
+        private Stock db = new Stock(); // Objet base de données Stock
         public catalogList()
         {
-        InitializeComponent();
+            InitializeComponent();
         }
-        private void Catalog_List(object sender, RoutedEventArgs e)
+        private void Catalog_List(object sender, RoutedEventArgs e) // Méthode d'affichage de la liste des produits
         {
-        var listing = db.produit.Include(c => c.categorie);
-        listing_product.ItemsSource = listing.ToList();
+            var listing = db.produit.Include(c => c.categorie); // Jointure pour la table produit avec la table categorie
+            listing_product.ItemsSource = listing.ToList(); // Source de la liste dans le fichier xaml vaut la jointure ci-dessus
         }
     }
 }

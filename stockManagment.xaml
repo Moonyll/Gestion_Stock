@@ -19,14 +19,14 @@
                     <DataGridTextColumn Header="Nom" Binding="{Binding nom}" FontSize="10" />
                     <DataGridTextColumn Header="Référence" Binding="{Binding reference}" FontSize="10"/>
                     <DataGridTextColumn Header="Descritpion" Binding="{Binding description}" FontSize="10"/>
-                    <DataGridTextColumn Header="Prix" Binding="{Binding prix}" Width="30" FontSize="10"/>
-                    <DataGridTextColumn Header="Quantité" Binding="{Binding quantite}" Width="45" FontSize="10"/>
+                    <DataGridTextColumn Header="Prix" Binding="{Binding prix}" FontSize="10"/>
+                    <DataGridTextColumn Header="Quantité" Binding="{Binding quantite}" FontSize="10"/>
                     <DataGridTextColumn Header="Image" Binding="{Binding image}" FontSize="10" Visibility="Hidden"/>
                     <!--image-->
                     <DataGridTemplateColumn Header="Image" Width="SizeToCells" IsReadOnly="True">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Image Source="{Binding image}"/>
+                                <Image MaxWidth="130" MaxHeight="95" Source="{Binding image}"/>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
@@ -72,7 +72,12 @@
             <ComboBox x:Name="categorie_choice" Grid.Column="1" Grid.Row="5" DisplayMemberPath="categorie1" SelectedValuePath="id" Background="#FF2A41D3" Height="25" Margin="0,3" HorizontalContentAlignment="Center" />
             <Button Grid.Column="0" Grid.Row="6" Content="Supprimer" Margin="15,11,0,4" Click="DelCar" RenderTransformOrigin="0.601,1.029" Background="#FFEA2929" FontWeight="Bold" FontSize="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="65" Foreground="White"/>
             <Button Grid.Column="1" Grid.Row="6" Content="Modifier" Margin="13,11,0,4" Click="UpCar" RenderTransformOrigin="0.307,0.493" HorizontalAlignment="Center" Width="88" FontWeight="Bold" FontSize="10" VerticalAlignment="Center" Background="#FF7EE46E" Foreground="White"/>
+
         </Grid>
         <!--Fin du formulaire de mise à jour-->
+        <!--Image selectionnée-->
+        <!--<Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="273" Width="auto" Background="#FF1167AE">
+            <Image MaxWidth="130" MaxHeight="95" Source="{Binding image}" Margin="0,0,-133,0"/>
+        </Grid>-->
     </StackPanel>
 </Page>
