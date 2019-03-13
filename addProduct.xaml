@@ -26,15 +26,15 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Label Grid.Column="0" Grid.Row="0" Margin="2,25,2,2" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center">Nom</Label>
-        <TextBox Name="nom" Grid.Column="1" Grid.Row="0" Margin="2,25,2,2" TextAlignment="Center" Background="#FF73BECF"/>
+        <TextBox Name="name" Grid.Column="1" Grid.Row="0" Margin="2,25,2,2" TextAlignment="Center" Background="#FF73BECF"/>
         <Label Grid.Column="0" Grid.Row="1" Margin="2" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White">Référence</Label>
         <TextBox Name="reference" Grid.Column="1" Grid.Row="1" Margin="2" TextAlignment="Center" Background="#FF73BECF"/>
         <Label Grid.Column="0" Grid.Row="2" Margin="2" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White">Description</Label>
         <TextBox  Name="description" Grid.Column="1" Grid.Row="2" Margin="2" TextAlignment="Center" Background="#FF73BECF"/>
         <Label Grid.Column="0" Grid.Row="3" Margin="2" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White">Prix</Label>
-        <TextBox Name="prix" Grid.Column="1" Grid.Row="3" Margin="2" TextAlignment="Center" Background="#FF73BECF"/>
+        <TextBox Name="price" Grid.Column="1" Grid.Row="3" Margin="2" TextAlignment="Center" Background="#FF73BECF"/>
         <Label Grid.Column="0" Grid.Row="4" Margin="2" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White">Quantité</Label>
-        <TextBox Name="quantite" Grid.Column="1" Grid.Row="4" Margin="2" TextAlignment="Center" Background="#FF73BECF"/>
+        <TextBox Name="quantity" Grid.Column="1" Grid.Row="4" Margin="2" TextAlignment="Center" Background="#FF73BECF"/>
         <Label Grid.Column="0" Grid.Row="5" Margin="2" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White">Image</Label>
         <TextBox Name="image" Grid.Column="1" Grid.Row="5" Margin="2" TextAlignment="Center" Background="#FF73BECF"/>
         <Label Grid.Column="0" Grid.Row="6" Margin="2" FontWeight="Bold" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White">Catégorie</Label>

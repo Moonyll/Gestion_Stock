@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="stockManagment" Loaded="Stock_List">
-    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="10" >
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="10" Loaded="Combo">
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="273" Width="auto" Background="#FF1167AE">
             <Grid.InputBindings>
                 <MouseBinding Gesture="LeftDoubleClick" Command="{Binding Car_Details}" />
@@ -57,17 +57,18 @@
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <Label Grid.Column="0" Grid.Row="0" Margin="2,25,0,2" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White">Nom</Label>
-            <TextBox Name="nom" Grid.Column="1" Grid.Row="0" Margin="2,25,2,2" TextAlignment="Center" Background="#FF73BECF" Foreground="White" FontWeight="Bold"/>
+            <TextBox Name="name" Grid.Column="1" Grid.Row="0" Margin="2,25,2,2" TextAlignment="Center" Background="#FF73BECF" Foreground="White" FontWeight="Bold"/>
             <Label Grid.Column="0" Grid.Row="1" Margin="2" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White">Référence</Label>
             <TextBox Name="reference" Grid.Column="1" Grid.Row="1" Margin="2" TextAlignment="Center" Background="#FF73BECF" Foreground="White" FontWeight="Bold"/>
             <Label Grid.Column="0" Grid.Row="2" Margin="2" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White">Description</Label>
             <TextBox  Name="description" Grid.Column="1" Grid.Row="2" Margin="2" TextAlignment="Center" Background="#FF73BECF" Foreground="White" FontWeight="Bold"/>
             <Label Grid.Column="0" Grid.Row="3" Margin="2" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White">Prix</Label>
-            <TextBox Name="prix" Grid.Column="1" Grid.Row="3" Margin="2" TextAlignment="Center" Background="#FF73BECF" Foreground="White"/>
+            <TextBox Name="price" Grid.Column="1" Grid.Row="3" Margin="2" TextAlignment="Center" Background="#FF73BECF" Foreground="White"/>
             <Label Grid.Column="0" Grid.Row="4" Margin="2" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White">Quantité</Label>
-            <TextBox Name="quantite" Grid.Column="1" Grid.Row="4" Margin="2" TextAlignment="Center" Background="#FF73BECF" Foreground="White" FontWeight="Bold"/>
+            <TextBox Name="quantity" Grid.Column="1" Grid.Row="4" Margin="2" TextAlignment="Center" Background="#FF73BECF" Foreground="White" FontWeight="Bold"/>
             <Label Grid.Column="0" Grid.Row="5" Margin="2" FontWeight="Bold" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White">Catégorie</Label>
-            <TextBox Name="categorie" Grid.Column="1" Grid.Row="5" Margin="2" TextAlignment="Center" Background="#FF73BECF" Foreground="White" FontWeight="Bold"/>
+            <!--<TextBox Name="categorie" Grid.Column="1" Grid.Row="5" Margin="2" TextAlignment="Center" Background="#FF73BECF" Foreground="White" FontWeight="Bold"/>-->
+            <ComboBox x:Name="categorie_choice" Grid.Column="1" Grid.Row="5" DisplayMemberPath="categorie1" SelectedValuePath="id" Background="#FF2A41D3" Height="25" Margin="0,3" HorizontalContentAlignment="Center" />
             <Button Grid.Column="0" Grid.Row="6" Content="Supprimer" Margin="15,11,0,4" Click="DelCar" RenderTransformOrigin="0.601,1.029" Background="#FFEA2929" FontWeight="Bold" FontSize="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="65" Foreground="White"/>
             <Button Grid.Column="1" Grid.Row="6" Content="Modifier" Margin="13,11,0,4" Click="UpCar" RenderTransformOrigin="0.307,0.493" HorizontalAlignment="Center" Width="88" FontWeight="Bold" FontSize="10" VerticalAlignment="Center" Background="#FF7EE46E" Foreground="White"/>
         </Grid>
