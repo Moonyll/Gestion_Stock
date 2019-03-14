@@ -33,5 +33,41 @@ namespace Gestion
             var listing = db.produit.Include(c => c.categorie); // Jointure pour la table produit avec la table categorie
             listing_product.ItemsSource = listing.ToList(); // Source de la liste dans le fichier xaml vaut la jointure ci-dessus
         }
+
+        //Dropdown
+        public void GridLoaded(object sender, RoutedEventArgs e)
+        {
+            categoryDropDown.ItemsSource = db.categorie.ToList();
+        }
+
+        //CaseSwitch pour trier par catégorie : 
+        private void Sort_Click(object sender, RoutedEventArgs e)
+        {
+            int SortVar = Convert.ToInt32(categoryDropDown.SelectedValue);
+            switch (SortVar)
+            {
+                case 1:
+                    listing_product.ItemsSource = db.produit.Where(tempCar => tempCar.categorie.id == 1).ToList();
+                    break;
+                case 2:
+                    listing_product.ItemsSource = db.produit.Where(TempBike => TempBike.categorie.id == 2).ToList();
+                    break;
+                case 3:
+                    listing_product.ItemsSource = db.produit.Where(TempBike => TempBike.categorie.id == 3).ToList();
+                    break;
+
+                default:
+                    listing_product.ItemsSource = db.produit.ToList();
+                    break;
+
+            }
+        }
+        // Bouton de suppression du choix de tri, on remet la methode d'affichage de base 
+        private void NoSort_Click(object sender, RoutedEventArgs e)
+        {
+            listing_product.ItemsSource = db.produit.ToList();
+        }
+
+
     }
 }

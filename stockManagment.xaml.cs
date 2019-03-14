@@ -57,6 +57,7 @@ namespace Gestion
             price.Text = car.prix.ToString(); // Prix du produit qui s'affiche dans le champs price
             quantity.Text = car.quantite.ToString(); // Quantité du produit qui s'affiche dans le champ quantity
             categorie_choice.Text = car.categorie.categorie1; // Catégorie du produit qui s'affiche dans le champs categorie
+            image.Text = car.image;
             //
         }
         private void UpCar(object sender, RoutedEventArgs e)
@@ -195,5 +196,24 @@ namespace Gestion
         {
             categorie_choice.ItemsSource = db.categorie.ToList();
         }
+
+        private void BrowseButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Création du système "OpenFileDialog" pour parcourir
+            Microsoft.Win32.OpenFileDialog openFileDlg = new Microsoft.Win32.OpenFileDialog();
+            // Filtrer les extensions 
+            openFileDlg.DefaultExt = ".jpg"; // Extension de fichier par défaut
+            openFileDlg.Filter = "JPEG  (.jpg)|*.jpg"; // Autres extensions possibles
+            // Lancer OpenFileDialog en appelant la méthode ShowDialog
+            Nullable<bool> result = openFileDlg.ShowDialog();
+            // Get the selected file name and display in a TextBox.
+            // Load content of file in a TextBlock
+            if (result == true)
+            {
+                image.Text = openFileDlg.FileName;
+            }
+        }
+
+        
     }
 }

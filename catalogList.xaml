@@ -7,19 +7,19 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="catalogList" Loaded="Catalog_List" Background="#FF1167AE">
-    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="273" Width="auto" Background="#FF1167AE">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="316" Width="Auto" Background="#FF1167AE" Loaded="GridLoaded" Margin="30,84,30,50">
         <Grid.InputBindings>
             <!--<MouseBinding Gesture="LeftDoubleClick" Command="{Binding Details}" />-->
         </Grid.InputBindings>
-        <DataGrid AutoGenerateColumns="False" x:Name="listing_product" Foreground="#FF1138BB" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2" IsReadOnly="True">
+        <DataGrid AutoGenerateColumns="False" x:Name="listing_product" Width="750" Foreground="#FF1138BB" HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True" >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Nom" Binding="{Binding nom}" />
-                <DataGridTextColumn Header="Référence" Binding="{Binding reference}"/>
-                <DataGridTextColumn Header="Descritpion" Binding="{Binding description}"/>
-                <DataGridTextColumn Header="Prix" Binding="{Binding prix}"/>
-                <DataGridTextColumn Header="Quantité" Binding="{Binding quantite}"/>
+                <DataGridTextColumn Header="Nom" Binding="{Binding nom}" Width="*" />
+                <DataGridTextColumn Header="Référence" Binding="{Binding reference}" Width="*"/>
+                <DataGridTextColumn Header="Descritpion" Binding="{Binding description}" Width="*"/>
+                <DataGridTextColumn Header="Prix" Binding="{Binding prix}" Width="*"/>
+                <DataGridTextColumn Header="Quantité" Binding="{Binding quantite}" Width="*"/>
                 <!--<DataGridTextColumn Header="Image" Binding="{Binding image}"/>-->
-                <DataGridTextColumn Header="Image" Binding="{Binding image}" FontSize="10" Visibility="Hidden"/>
+                <DataGridTextColumn Header="Image" Binding="{Binding image}" FontSize="10" Visibility="Hidden" Width="*"/>
                 <!--image-->
                 <DataGridTemplateColumn Header="Image" Width="SizeToCells" IsReadOnly="True">
                     <DataGridTemplateColumn.CellTemplate>
@@ -32,5 +32,28 @@
                 <DataGridTextColumn Header="Categorie" Binding="{Binding categorie.categorie1}"/>
             </DataGrid.Columns>
         </DataGrid>
+
+
+        <!-- comboBox de tri -->
+        <Label Foreground="White" FontWeight="Bold" Margin="153,-45,0,286" HorizontalAlignment="Left" Width="577">Filtrer par :</Label>
+        <ComboBox x:Name="categoryDropDown" IsReadOnly="True" IsEditable="True" Text="-- Catégorie --" DisplayMemberPath="categorie1" SelectedValuePath="id" Width="120" VerticalAlignment="Top" Margin="40,-43,181,0" />
+        <!-- Validation du choix de tri -->
+        <Button Content="Filtrer" VerticalAlignment="Top" Width="50" Foreground="White" FontWeight="Bold" Click="Sort_Click" Margin="160,-43,131,0">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB0C5DE" Offset="0"/>
+                    <GradientStop Color="#FF1B559B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <!-- Suppresion du tri -->
+        <Button Content="Tout Afficher" VerticalAlignment="Top" Width="90" Foreground="White" FontWeight="Bold" Click="NoSort_Click" Margin="215,-43,36,0">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB0C5DE" Offset="0"/>
+                    <GradientStop Color="#FF1B559B" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
     </Grid>
 </Page>

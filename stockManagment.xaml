@@ -36,7 +36,7 @@
             </DataGrid>
         </Grid>
         <!--Formulaire de mis à jour-->
-        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="273" Width="250" Margin="10" Background="#FF1167AE">
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="325" Width="351" Margin="10" Background="#FF1167AE">
             <!--Définition des colonnes-->
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
@@ -67,11 +67,17 @@
             <TextBox Name="price" Grid.Column="1" Grid.Row="3" Margin="2" TextAlignment="Center" Background="#FF73BECF" Foreground="White"/>
             <Label Grid.Column="0" Grid.Row="4" Margin="2" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White">Quantité</Label>
             <TextBox Name="quantity" Grid.Column="1" Grid.Row="4" Margin="2" TextAlignment="Center" Background="#FF73BECF" Foreground="White" FontWeight="Bold"/>
-            <Label Grid.Column="0" Grid.Row="5" Margin="2" FontWeight="Bold" Height="50" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White">Catégorie</Label>
+            <Label Grid.Column="0" Grid.Row="6" Margin="14,49,11,-24" FontWeight="Bold" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White">Catégorie</Label>
             <!--<TextBox Name="categorie" Grid.Column="1" Grid.Row="5" Margin="2" TextAlignment="Center" Background="#FF73BECF" Foreground="White" FontWeight="Bold"/>-->
-            <ComboBox x:Name="categorie_choice" Grid.Column="1" Grid.Row="5" DisplayMemberPath="categorie1" SelectedValuePath="id" Background="#FF2A41D3" Height="25" Margin="0,3" HorizontalContentAlignment="Center" />
-            <Button Grid.Column="0" Grid.Row="6" Content="Supprimer" Margin="15,11,0,4" Click="DelCar" RenderTransformOrigin="0.601,1.029" Background="#FFEA2929" FontWeight="Bold" FontSize="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="65" Foreground="White"/>
-            <Button Grid.Column="1" Grid.Row="6" Content="Modifier" Margin="13,11,0,4" Click="UpCar" RenderTransformOrigin="0.307,0.493" HorizontalAlignment="Center" Width="88" FontWeight="Bold" FontSize="10" VerticalAlignment="Center" Background="#FF7EE46E" Foreground="White"/>
+            <Label Grid.Column="0" Grid.Row="5" Margin="2" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White">Image</Label>
+            <TextBox Name="image" Grid.Column="1" Grid.Row="5" Margin="2" Background="#FF73BECF"/>
+            <Button x:Name="BrowseButton" Content="Parcourir" HorizontalAlignment="Left"   
+                 VerticalAlignment="Top" Width="81" Click="BrowseButton_Click"   
+                RenderTransformOrigin="1.047,0.821" Height="24" Grid.Column="1" Margin="2,3,0,0" Grid.Row="6"/>
+
+            <ComboBox x:Name="categorie_choice" Grid.Row="6" DisplayMemberPath="categorie1" SelectedValuePath="id" Background="#FF73BECF" Height="25" Margin="0,48,0,-25" HorizontalContentAlignment="Center" Grid.ColumnSpan="5" Grid.Column="1" />
+            <Button Grid.Column="0" Grid.Row="6" Content="Supprimer" Margin="12,87,13,-55" Click="DelCar" RenderTransformOrigin="0.601,1.029" Background="#FFEA2929" FontWeight="Bold" FontSize="10" HorizontalAlignment="Center" VerticalAlignment="Center" Width="66" Foreground="White"/>
+            <Button Grid.Column="1" Grid.Row="6" Content="Modifier" Margin="8,87,9,-55" Click="UpCar" RenderTransformOrigin="0.307,0.493" HorizontalAlignment="Center" Width="88" FontWeight="Bold" FontSize="10" VerticalAlignment="Center" Background="#FF7EE46E" Foreground="White"/>
 
         </Grid>
         <!--Fin du formulaire de mise à jour-->
